@@ -1,0 +1,75 @@
+* {
+    box-sizing: border-box;
+}
+
+
+body {
+    background-color: #4078a5
+}
+
+
+h1 {
+    text-align: center;
+    color: white;
+}
+
+
+.deck {
+   font-size: 35px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
+.deck > div {
+    flex-basis: calc(25% - 20px);
+    text-align: center;
+    border: 2px solid black;
+    margin: 10px;
+    padding: 20px 0;
+    cursor: pointer;
+    color: #4078a5;
+}
+
+
+.star_redo {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-size: 25px;
+    color: black;
+
+}
+
+
+.close.close {
+    color: black;
+    background-color: firebrick;
+    border-radius: 9999px;
+    pointer-events: none;
+}
+
+
+.fa-star.fa-star {
+    color: yellow;
+}
+
+
+.fa-redo.fa-redo {
+    cursor: pointer;
+}
+
+
+.matched.matched {
+    color: black;
+    background-color: palegreen;
+    pointer-events: none;
+    border-radius: 9999px;
+    border:  2px solid white;
+}
+
+
+.used {
+    opacity: 0.1;
+}
