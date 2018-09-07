@@ -132,7 +132,7 @@ window.onload = () => {
         }
         currentElement.addEventListener('click', onClick)
     }
-    function add() {
+    function adding() {
         seconds++;
         if (seconds >= 60) {
             seconds = 0;
@@ -142,7 +142,7 @@ window.onload = () => {
         timeGoes.innerHTML = `${minutes}:${seconds}`
 
     }
-    t = setInterval(add, 1000);
+    t = setInterval(adding, 1000);
 
 
 };
