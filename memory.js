@@ -37,6 +37,15 @@ window.onload = () => {
     let collectionArray = [];
     let moves = 0;
     let pokusaji = 4;
+    const timeGoes = document.querySelector('.time');
+    let seconds = 0;
+    let  minutes = 0, t;
+    let star= 3;
+
+
+
+
+    
 
     // /**
     //  * Provrtiti sve stavke u shuffledDeck
@@ -62,6 +71,8 @@ window.onload = () => {
             //  * Funkcionalnost za dodavanje/micanje klase
             //  */
             currentElement.classList.add('close');
+
+
 
             /**
              * 1. Punis neki array
@@ -106,19 +117,32 @@ window.onload = () => {
                         collectionArray = [];
                         moves++;
                         document.querySelector('.moves').innerHTML = moves;
-                    }, 1000);
+                    }, 500);
                 }
 
-
             }
-            if (moves !== 0 && (moves % 6) === 0) {
+            if (moves !== 0 &&  (moves % 6) === 0) {
                 document.querySelector('.star:not(.used)').classList.add('used');
+                star--
             }
-
             if (!document.querySelector('.deck div:not(.matched)'))
-                alert('You won in  ' + (moves) + ' moves')
+                alert('You won with '+( star    ) + '\xa0' + 'stars and ' + '\xa0'  + (      minutes     ) + '\xa0'+ (     seconds)  + '\xa0' + '  minutes and seconds')
 
-            }
+
+        }
         currentElement.addEventListener('click', onClick)
     }
+    function add() {
+        seconds++;
+        if (seconds >= 60) {
+            seconds = 0;
+            minutes++;
+        }
+
+        timeGoes.innerHTML = `${minutes}:${seconds}`
+
+    }
+    t = setInterval(add, 1000);
+
+
 };

@@ -73,3 +73,11 @@ h1 {
 .used {
     opacity: 0.1;
 }
+
+
+.time {
+    text-align: center;
+    font-size:40px;
+    display: flex;
+
+}
